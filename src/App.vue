@@ -1,6 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <header>
+   <nav>
+     <form>
+       <RouterLink to="/">
+         <img src="/ytb.png" alt="Youtube">
+       </RouterLink>
+       <form>
+         <input type="text" placeholder="Search...">
+       </form>
+       <RouterView></RouterView>
+       <HelloWorld></HelloWorld>
+     </form>
+   </nav>
+ </header>
 </template>
 
 <script>
