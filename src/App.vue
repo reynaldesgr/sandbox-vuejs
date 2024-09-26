@@ -3,26 +3,17 @@
    <nav>
      <form>
        <RouterLink to="/">
-         <img src="/ytb.png" alt="Youtube">
        </RouterLink>
-       <form>
-         <input type="text" placeholder="Search...">
-       </form>
        <RouterView></RouterView>
-       <HelloWorld></HelloWorld>
      </form>
    </nav>
  </header>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
 

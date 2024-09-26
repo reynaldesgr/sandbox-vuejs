@@ -33,8 +33,13 @@ const actions = {
     },
     fetchVideoDetails({commit}, videoId) {
         // Simulate an API call
-        const video = { id: videoId, title: 'Vue.JS - Tutorial', views: 150, description: 'Awesome !' };
-        commit('SET_SELECTED_VIDEO', video);
+        if (videoId === '1') {
+            const video = {id: 1, title: 'Vue.JS - Tutorial', views: 150, description: 'Tutorial for beginners.'};
+            commit('SET_SELECTED_VIDEO', video)
+        } else {
+            const video = {id: 2, title: 'PrimeVue - Tutorial', views: 200, description: 'Tutorial for beginners.'};
+            commit('SET_SELECTED_VIDEO', video)
+        }
     },
     postComment({ commit }, comment) {
         commit('ADD_COMMENT', comment);
@@ -42,8 +47,8 @@ const actions = {
     fetchComments({ commit }, videoId) {
         // Simulate an API call
         const comments = [
-            { id: 1, content: 'Super vidéo!', author: 'User1' },
-            { id: 2, content: 'Merci pour le tutoriel.', author: 'User2' },
+            { id: 1, videoId: videoId, content: 'Super vidéo!', author: 'User1' },
+            { id: 2, videoId: videoId, content: 'Merci pour le tutoriel.', author: 'User2' },
         ];
         commit('SET_COMMENTS', comments);
     },
