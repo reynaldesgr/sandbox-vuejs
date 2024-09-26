@@ -1,11 +1,19 @@
 ﻿<template>
-  <div v-if="selectedVideo">
-    <h1> {{ selectedVideo.title }} </h1>
-    <p> {{ selectedVideo.description }} </p>
-    <p> Views : {{ selectedVideo.views }} </p>
-    <ul>
-      <li v-for="comment in comments" :key="comment.id">
-        {{ comment.author }}: {{ comment.comment }}
+  <div v-if="selectedVideo" class="container mx-auto p-6">
+    <h1 class="text-4xl font-bold mb-4 text-center">{{ selectedVideo.title }}</h1>
+    
+    <p class="text-gray-700 text-lg mb-6">{{ selectedVideo.description }}</p>
+    
+    <p class="text-gray-500 mb-8">Views: {{ selectedVideo.views }}</p>
+    
+    <ul class="space-y-4">
+      <li
+          v-for="comment in comments"
+          :key="comment.id"
+          class="bg-white shadow-lg rounded-lg p-4"
+      >
+        <p class="font-semibold text-lg text-gray-800 mb-2">{{ comment.author }}</p>
+        <p class="text-gray-600">{{ comment.comment }}</p>
       </li>
     </ul>
   </div>
