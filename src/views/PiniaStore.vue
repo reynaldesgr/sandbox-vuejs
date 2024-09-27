@@ -1,8 +1,8 @@
 ﻿<template>
   <!-- Avoiding page refresh/reload (@submit.prevent) -->
   <form @submit.prevent="handleSubmit">
-    <input v-model="newItem" placeholder="Add new item" />
-    <button type="submit">Add</button>
+    <input class="w-fl md:w-1/12 p-2 border border-gray-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 m-2" v-model="newItem" placeholder="Add new item" />
+    <button class="text-gray-700 text-lg mb-6 hover:underline" type="submit">Add</button>
   </form>
   <ul>
     <li v-for="item in items" :key="item">{{ item }}</li>
