@@ -1,10 +1,10 @@
 ﻿<template>
   <div v-if="selectedVideo" class="container mx-auto p-6">
-    <h1 class="text-4xl font-bold mb-4 text-center">{{ selectedVideo.title }}</h1>
+    <h1 class="text-4xl font-bold mb-4 text-center text-amber-50">{{ selectedVideo.title }}</h1>
     
-    <p class="text-gray-700 text-lg mb-6">{{ selectedVideo.description }}</p>
+    <p class="text-lg mb-6 text-amber-50">{{ selectedVideo.description }}</p>
     
-    <p class="text-gray-500 mb-8">Views: {{ selectedVideo.views }}</p>
+    <p class="mb-8 text-amber-50">Views: {{ selectedVideo.views }}</p>
     
     <ul class="space-y-4">
       <li
