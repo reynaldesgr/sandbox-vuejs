@@ -1,6 +1,7 @@
 ﻿// This file contains the different VueX stores.
 
 import {createStore} from "vuex";
+import {createPinia} from "pinia";
 import video from "@/store/modules/video";
 import user from "@/store/modules/user";
 
@@ -11,4 +12,6 @@ const store = createStore({
     }
 })
 
-export default store;
+const pinia = createPinia();
+
+export {store, pinia };

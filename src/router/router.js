@@ -2,6 +2,7 @@
 import HomeFeed from "@/views/HomeFeed.vue";
 import VideoDetails from "@/views/VideoDetails.vue";
 import { createRouter, createWebHistory } from "vue-router";
+import PiniaStore from "@/views/PiniaStore.vue";
 
 // Routes définies pour le routeur
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
         path: '/video/:id',
         name: 'Videos',
         component: VideoDetails
+    },
+    {
+        path: '/test/pinia',
+        name: 'Pinia Store',
+        component: PiniaStore
     }
 ];
 
