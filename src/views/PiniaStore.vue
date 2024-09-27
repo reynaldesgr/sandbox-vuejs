@@ -1,5 +1,5 @@
 ﻿<template>
-  // Avoiding page refresh/reload (@submit.prevent)
+  <!-- Avoiding page refresh/reload (@submit.prevent) -->
   <form @submit.prevent="handleSubmit">
     <input v-model="newItem" placeholder="Add new item" />
     <button type="submit">Add</button>
